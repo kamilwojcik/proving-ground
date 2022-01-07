@@ -1,15 +1,9 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
+#include "Vprint.h"
 
-template<typename T>
-void Vprint (const vector<T> & vec_to_print)
-{
-    cout<<"[ ";
-    for (auto i :vec_to_print) cout<<i<<" ";
-    cout<<"]"<<endl;
-}
+using namespace std;
 
 int main ()
 {
