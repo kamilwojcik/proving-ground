@@ -13,9 +13,17 @@ void Vprint (const vector<T> & vec_to_print)
 
 int main ()
 {
-    vector<int> vec = {1,2,3,4,5};
-
+    vector<int> vec = {1,2,4,5,6};
     Vprint(vec);
+    vec.erase(vec.begin());
+    Vprint(vec);
+    vec.emplace_back(5);
+    vec.emplace(vec.begin(),12);
+    Vprint(vec);
+
+    cout<<"Size: "<<vec.size()<<"\nMax size: "<<vec.max_size()<<"\nCapacity: "<<vec.capacity()<<endl;
+    vec.clear();
+    cout<<"--------After clear--------\nSize: "<<vec.size()<<"\nCapacity: "<<vec.capacity()<<endl;
 
     return 0;
 }
