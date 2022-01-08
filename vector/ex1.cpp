@@ -7,7 +7,7 @@ using namespace std;
 
 int main ()
 {
-    vector vec = {1,2,4,5,6}; //c++17 allows it
+    vector vec = {1,2,4,5,6}; //possible since c++17
     Vprint(vec);
     vec.erase(vec.begin());
     Vprint(vec);

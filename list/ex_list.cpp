@@ -9,7 +9,7 @@ int main ()
 {
     auto print = [](const int& n) { std::cout << ' ' << n; };
 
-    list mylist = {0,1,2,3,4,5}; //c++17 allows it
+    list mylist = {0,1,2,3,4,5}; //possible since c++17
     
     std::cout << "mylist:";
     std::for_each(mylist.begin(), mylist.end(), print);

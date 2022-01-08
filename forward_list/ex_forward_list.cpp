@@ -8,7 +8,7 @@ int main ()
 {
     auto print = [](const int& n) { std::cout << ' ' << n; };
 
-    forward_list flist = {0,1,2,3,4,5,6}; //c++17 allows it
+    forward_list flist = {0,1,2,3,4,5,6}; //possible since c++17
     
     std::cout << "flist:";
     std::for_each(flist.begin(), flist.end(), print);
