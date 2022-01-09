@@ -16,12 +16,9 @@ int main ()
     std::advance(it, 2);
     flist.erase_after(it);
     flist.emplace_after(flist.before_begin(),10);
-    auto next_it = flist.begin();
-    while (next_it != flist.end())
-    {
-        it=next_it;
-        next_it++;
-    }
+    
+    it=flist.before_begin();
+    std::advance(it, std::distance(it, flist.end())-1);
     flist.emplace_after(it,10);
 
     std::cout << "\nflist:";
