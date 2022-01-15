@@ -1,32 +1,24 @@
 #include <iostream>
-#include <algorithm>
 #include <string>
-#include <string_view>
 #include <vector>
+
+#include "vowel.hpp"
 
 using namespace std;
 
-vector<string> removeVowels(vector<string> input)
-{
-    constexpr string_view vowels = "aAeEiIoOuUyY";
-    for (auto& str : input)
-        for (auto vowel : vowels)
-            str.erase( remove( str.begin(), str.end(), vowel ), str.end() );
-
-    return input;
-}
-
 int main ()
 {
-    vector<string> input={"abcde", "aabbbccabc", "qwerty"};
-    vector<string> output=removeVowels(input);
-
+    vector<string> mystr={"abcde", "aabbbccabc", "qwerty"};
+    cout<<"\nBeofre remove_vowels:"<<endl;
+    
     cout<<"Input:"<<endl;
-    for (auto str : input)
+    for (auto str : mystr)
         cout<<"   "<<str<<endl;
 
-    cout<<"\nOutput:"<<endl;
-    for (auto str : output)
+    removeVowels(mystr);
+
+    cout<<"\nAfter remove_vowels:"<<endl;
+    for (auto str : mystr)
         cout<<"   "<<str<<endl;
 
     return 0;
