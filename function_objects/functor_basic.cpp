@@ -18,8 +18,8 @@ public:
     {
         times_called++;
         bool ans = (given_number % 6 == 0);
-        if (ans) cout<<"6 is a vidisor of "<<given_number<<endl;
-        else cout<<"6 is NOT a vidisor of "<<given_number<<endl;
+        if (ans) cout<<"6 is a divisor of "<<given_number<<endl;
+        else cout<<"6 is NOT a divisor of "<<given_number<<endl;
         cout<<"Times called: "<<times_called<<endl;
         return ans;
     }
