@@ -40,14 +40,14 @@ std::vector<std::pair<uint8_t, uint8_t>> compressGrayscale(std::array<std::array
     for (auto& row : to_compress)
     {
         auto compressed_row = compressRow(row);
-        printCompressedRow(compressed_row);
+        //printCompressedRow(compressed_row);
         ans.insert(std::end(ans), std::begin(compressed_row), std::end(compressed_row));
     }
     ans.shrink_to_fit();
     return ans;
 }
 
-std::array<std::array<uint8_t, width>, height> decompressGrayscale (std::vector<std::pair<uint8_t, uint8_t>> to_decompress)
+std::array<std::array<uint8_t, width>, height> decompressGrayscale(std::vector<std::pair<uint8_t, uint8_t>> to_decompress)
 {
     std::array<std::array<uint8_t, width>, height> ans;
     int row, col, counter=0;
