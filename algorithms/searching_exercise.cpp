@@ -35,16 +35,15 @@ int main()
             );
     cout<<endl;
 
-    vector subsequence1 {6,6};
-    auto searchit = search(begin(v), end(v), begin(subsequence1), end(subsequence1));
+    vector subsequence {6,6};
+    auto searchit = search(begin(v), end(v), begin(subsequence), end(subsequence));
     if (searchit != end(v))
     {
         cout<<"Pierwsza para tych szóstek: "<<*searchit<<", "<<*(++searchit)<<endl;
     }
     else cout<<"Sorry, nie ma (6,6)!"<<endl;
 
-    vector subsequence2 {7,7};
-    searchit = search(begin(v), end(v), begin(subsequence2), end(subsequence2));
+    searchit = search_n(begin(v), end(v), 2, 7);
     if (searchit != end(v))
     {
         cout<<"Pierwsza para siódemek: "<<*searchit<<", "<<*(++searchit)<<endl;
