@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 #include <vector>
 #include <algorithm>
 #include <functional>
@@ -24,6 +25,14 @@ int main()
 
     cout<<"Elementy większe od 6: ";
     for_each(begin(v_out), end(v_out), print_el);
+    cout<<endl;
+
+    cout<<"Elementy 2, 4, 6 lub 8:"<<endl;
+    copy_if(begin(v),
+            end(v),
+            ostream_iterator<int>(cout, " "),
+            [](auto& i){return i == 2 || i == 4 || i == 6 || i == 8;}
+            );
     cout<<endl;
 
     vector subsequence1 {6,6};
