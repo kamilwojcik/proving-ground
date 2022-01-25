@@ -13,6 +13,11 @@ int main()
     std::for_each(begin(v), end(v), [](auto i){std::cout<<i<<" ";});
     std::cout<<std::endl;
 
+    std::sort(begin(v), end(v));
+    std::cout<<"Vector v - after sort: ";
+    std::for_each(begin(v), end(v), [](auto i){std::cout<<i<<" ";});
+    std::cout<<std::endl;
+
     v.erase(std::unique(begin(v), end(v)), end(v));
     std::cout<<"Vector v - after uniqie-erase: ";
     std::copy(begin(v), end(v), std::ostream_iterator<int>(std::cout, " "));
