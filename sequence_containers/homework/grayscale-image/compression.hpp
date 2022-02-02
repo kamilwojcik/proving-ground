@@ -4,6 +4,7 @@
 #include <array>
 #include <vector>
 #include <utility>
+#include <cstdint>
 
 constexpr size_t width = 32;//240;
 constexpr size_t height = 32;//160;
